@@ -51,7 +51,7 @@ This is the **Frontend Submission** for Round 1. Backend integration and advance
 ## 📧 Contact Us
 
 For queries or suggestions:
-- Email: support@serenemind.com
+- Email: support@serenemind.com, krishan0467.be23@chitkara.edu.in , driksha1822.be23@chitkara.edu.in
 - GitHub: [GitHub Repository](https://github.com/krishhn13/Mental-Wellness-Hub)
 
 © 2025 SereneMind. All rights reserved.
