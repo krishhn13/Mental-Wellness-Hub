@@ -1,0 +1,95 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Mental Wellness Hub</title>
+    <link rel="stylesheet" href="css/styles.css">
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600&display=swap">
+    <link href="https://fonts.googleapis.com/css2?family=Merriweather:wght@300;400;700&display=swap" rel="stylesheet">
+    <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+</head>
+<body>
+    <nav class="navbar">
+        <h1>Mental Wellness Hub</h1>
+        <div class="nav-links">
+            <a href="index.html">Home</a>
+            <a href="journal.html">Journal</a>
+            <a href="jokes.html">Jokes</a>
+            <a href="games.html">Games</a>
+            <a href="breathe.html">Breathe</a>
+            <a href="stress.html">Stress</a>
+            <button id="theme-toggle" aria-label="Toggle theme">☀️</button>        </div>
+    </nav>
+
+    <div class="container">
+        <section class="hero">
+            <div class="hero-content">
+                <h1>Mood Journal</h1>
+                <p>Your personal space to track, reflect, and grow.</p>
+            </div>
+        </section>
+
+        <section class="features">
+            <h2>Why Use Mood Journal?</h2>
+            <div class="feature-grid">
+                <div class="feature-card">
+                    <h3>📅 Daily Mood Logging</h3>
+                    <p>Record your feelings and activities effortlessly.</p>
+                </div>
+                <div class="feature-card">
+                    <h3>📊 Insightful Analytics</h3>
+                    <p>Track emotional trends and visualize data.</p>
+                </div>
+                <div class="feature-card">
+                    <h3>📚 Mood History</h3>
+                    <p>View a detailed log of your past moods.</p>
+                </div>
+            </div>
+        </section>
+
+        <section id="mood-section" class="mood-section">
+            <h2>How are you feeling today?</h2>
+            <div class="mood-buttons">
+                <button class="mood-btn" data-mood="Happy">😊</button>
+                <button class="mood-btn" data-mood="Sad">😢</button>
+                <button class="mood-btn" data-mood="Angry">😡</button>
+                <button class="mood-btn" data-mood="Excited">🤩</button>
+                <button class="mood-btn" data-mood="Tired">😴</button>
+                <button class="mood-btn" data-mood="Anxious">😟</button>
+            </div>
+            <textarea id="activity" rows="3" placeholder="Add a note about your day..."></textarea>
+            <button id="saveBtn">Log Mood</button>
+        </section>
+
+        <section class="insights-log-wrapper">
+            <section class="insights-section">
+                <h2>📊 Mood Insights</h2>
+                <canvas id="moodChart"></canvas>
+                <p id="chartSummary">Track your emotional trends over time.</p>
+            </section>
+
+            <section class="log-section">
+                <h2>📚 Mood History</h2>
+                <label for="mood-date">Select Date:</label>
+                <input type="date" id="mood-date">
+                <div id="logContainer">
+                    <p class="empty-log">No logs available for the selected date.</p>
+                </div>
+            </section>
+        </section>
+    </div>
+
+    <footer class="footer">
+        <p>© 2025 Mental Wellness Hub | By 404 : NOT FOUND</p>
+        <div class="social-links">
+            <a href="x.com/Krishnsah13" aria-label="Twitter">🐦</a>
+            <a href="https://github.com/krishhn13" aria-label="GitHub">💻</a>
+            <a href="https://linkedin.com/in/krishn13" aria-label="Contact">✉️</a>
+        </div>
+    </footer>
+
+    <script src="js/common.js"></script>
+    <script src="js/mood.js"></script>
+</body>
+</html>

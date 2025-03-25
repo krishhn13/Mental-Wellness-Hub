@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Breathe - Mental Wellness Hub</title>
+    <link rel="stylesheet" href="css/styles.css">
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600&display=swap">
+    <link href="https://fonts.googleapis.com/css2?family=Merriweather:wght@300;400;700&display=swap" rel="stylesheet">
+</head>
+<body>
+    <nav class="navbar">
+        <h1>Mental Wellness Hub</h1>
+        <div class="nav-links">
+            <a href="index.html">Home</a>
+            <a href="journal.html">Journal</a>
+            <a href="jokes.html">Jokes</a>
+            <a href="games.html">Games</a>
+            <a href="breathe.html">Breathe</a>
+            <a href="stress.html">Stress</a>
+            <button id="theme-toggle" aria-label="Toggle theme">☀️</button>
+        </div>
+    </nav>
+
+    <div class="container">
+        <section class="breathing">
+            <h2>Guided Breathing</h2>
+            <div id="breathing-circle"></div>
+            <div id="breath-counter">Breaths: 0</div>
+            <div class="controls">
+                <button data-time="5">5 Min Chill</button>
+                <button data-time="10">10 Min Peace</button>
+                <button id="music-toggle">🎵 Peaceful Music</button>
+            </div>
+        </section>
+    </div>
+
+    <footer class="footer">
+        <p>© 2025 Mental Wellness Hub | By 404 : NOT FOUND</p>
+        <div class="social-links">
+            <a href="x.com/Krishnsah13" aria-label="Twitter">🐦</a>
+            <a href="https://github.com/krishhn13" aria-label="GitHub">💻</a>
+            <a href="https://linkedin.com/in/krishn13" aria-label="Contact">✉️</a>
+        </div>
+    </footer>
+
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.5/gsap.min.js"></script>
+    <script src="js/common.js"></script>
+    <script src="js/breathe.js"></script>
+</body>
+</html>
