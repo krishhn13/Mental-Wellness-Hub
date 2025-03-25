@@ -1,6 +1,6 @@
 # 🌸 SereneMind – Your Mental Wellness Hub
 
-**Hack5ive Hackathon Project by Krishan Kumar Sah and Driksha Thakur**
+**Hack5ive Hackathon Project by _Krishan Kumar Sah_ and _Driksha Thakur_**
 
 ---
 
@@ -36,10 +36,22 @@ Our platform is designed to make self-care fun, interactive, and insightful. Whe
 
 ---
 
-## 🚀 Tech Stack Used (Frontend)
+## 🚀 Tech Stack (Frontend)
 
-- **HTML, CSS, JavaScript** – For a dynamic, responsive, and stunning UI/UX.
-- 
+- **HTML, CSS, JavaScript** – For a smooth, interactive, and responsive UI.
+
 ---
 
+## 🏆 Hack5ive Hackathon – Round 1 Submission
 
+This is the **Frontend Submission** for Round 1. Backend integration and advanced features will follow in later rounds.
+
+---
+
+## 📧 Contact Us
+
+For queries or suggestions:
+- Email: support@serenemind.com
+- GitHub: [GitHub Repository](https://github.com/krishhn13/Mental-Wellness-Hub)
+
+© 2025 SereneMind. All rights reserved.
