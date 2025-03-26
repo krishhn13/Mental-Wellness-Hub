@@ -6,7 +6,7 @@
     font-family: 'Poppins', sans-serif;
 }
 body {
-    background: linear-gradient(180deg, #f7f0e6 0%, #e6f0fa 100%);
+    background: #f5f5dc;;
     color: #2c2c54;
     transition: all 0.3s ease;
     overflow-x: hidden;
@@ -32,10 +32,17 @@ body.dark {
 body.dark .navbar {
     background: rgba(42, 42, 62, 0.9);
 }
+.logo {
+    /* mix-blend-mode:; */
+    height: 90px; /* Adjust size as needed */
+    width: auto;
+    display: block;
+}
+
 .navbar h1 {
     font-family: 'Merriweather', serif;
     font-size: 1.8rem;
-    color: #ff6f61;
+    color: #008080;
     text-shadow: 1px 1px 2px rgba(0, 0, 0, 0.1);
 }
 .nav-links a {
@@ -85,7 +92,7 @@ body.dark .nav-links a {
 
 /* Hero Section */
 .hero {
-    background: linear-gradient(135deg, #ff9a8b 0%, #ff6f61 100%);
+    background: linear-gradient(to bottom, #008080, #006666, #004d4d);;
     padding: 80px 20px;
     text-align: center;
     border-bottom: 6px dashed #ffd700;
@@ -237,7 +244,7 @@ body.dark .features {
     margin-top: 30px;
 }
 .feature-card {
-    background: linear-gradient(145deg, #f7f0e6 0%, #e6f0fa 100%);
+    background: linear-gradient(to bottom, #e0e0e0, #a0ced9);
     padding: 25px;
     border-radius: 15px;
     box-shadow: 0 8px 20px rgba(0, 0, 0, 0.1);
@@ -267,12 +274,12 @@ body.dark .feature-card {
 body.dark .mood-section {
     background: #2a2a3e;
 }
-h1 { font-size: 2.5rem; font-weight: 600; color: #ff6f61; }
+h1 { font-size: 2.5rem; font-weight: 600; color: #008080; }
 h2 {
     font-family: 'Merriweather', serif;
     font-size: 2rem;
     margin-bottom: 30px;
-    color: #ff6f61;
+    color: #cd7f32;
 }
 h3 { font-size: 1.5rem; margin-bottom: 15px; }
 .mood-buttons {
