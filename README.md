@@ -1,6 +1,7 @@
 # 🌸 SereneMind – Your Mental Wellness Hub
 
 *Hack5ive Hackathon Project by Krishan Kumar Sah and Driksha Thakur*
+hey there!
 ---
 
 ## 🎯 About SereneMind
