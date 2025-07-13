@@ -4,7 +4,10 @@ document.addEventListener('DOMContentLoaded', () => {
     laugh: new Audio('https://www.soundjay.com/human/sounds/laughter-01.mp3'),
     success: new Audio('https://www.soundjay.com/misc/sounds/bell-ring-01.mp3')
   };
-  function playSound(type) { sounds[type].play().catch(err => console.log('Audio failed:', err)); }
+
+  function playSound(type) {
+    sounds[type].play().catch(err => console.log('Audio failed:', err));
+  }
 
   const jokeDisplay = document.getElementById('joke-display');
   const nextJoke = document.getElementById('next-joke');
@@ -19,20 +22,18 @@ document.addEventListener('DOMContentLoaded', () => {
     const url = category === 'all'
       ? '/api/jokes'
       : `/api/jokes?category=${category}`;
-
     const response = await fetch(url);
     return await response.json();
   }
-
 
   async function showJoke() {
     const selectedCategory = jokeCategory.value;
     const jokes = await fetchJokes(selectedCategory);
     const unseenJokes = jokes.filter(joke => !seenJokes.has(joke.text));
     if (unseenJokes.length === 0) seenJokes.clear();
-    const randomJoke = unseenJokes.length > 0 ?
-      unseenJokes[Math.floor(Math.random() * unseenJokes.length)] :
-      jokes[Math.floor(Math.random() * jokes.length)];
+    const randomJoke = unseenJokes.length > 0
+      ? unseenJokes[Math.floor(Math.random() * unseenJokes.length)]
+      : jokes[Math.floor(Math.random() * jokes.length)];
     currentJoke = randomJoke;
     jokeDisplay.textContent = randomJoke.text;
     seenJokes.add(randomJoke.text);
@@ -40,6 +41,7 @@ document.addEventListener('DOMContentLoaded', () => {
     gsap.from(jokeDisplay, { opacity: 0, y: 20, duration: 0.5, ease: 'bounce.out' });
     playSound('laugh');
   }
+
   showJoke();
 
   nextJoke.addEventListener('click', () => {
@@ -47,7 +49,7 @@ document.addEventListener('DOMContentLoaded', () => {
     playSound('click');
   });
 
-  favoriteJokeBtn.addEventListener('click', async () => {
+  favoriteJokeBtn.addEventListener('click', () => {
     if (currentJoke) {
       let favorites = JSON.parse(localStorage.getItem('favoriteJokes')) || [];
       if (!favorites.includes(currentJoke.text)) {
@@ -79,8 +81,7 @@ document.addEventListener('DOMContentLoaded', () => {
     playSound('click');
   });
 
-  // Meme functionality
-document.addEventListener('DOMContentLoaded', () => {
+  // ✅ Meme Section
   const memeImage = document.getElementById('meme-image');
   const memeFallback = document.getElementById('meme-fallback');
   const nextMeme = document.getElementById('next-meme');
@@ -96,10 +97,10 @@ document.addEventListener('DOMContentLoaded', () => {
       console.log("Meme URL:", data.url);
 
       memeImage.src = data.url;
-
       memeImage.onload = () => {
         console.log("Meme loaded successfully");
         memeImage.style.display = 'block';
+        gsap.from(memeImage, { opacity: 0, rotate: 10, duration: 0.5 });
       };
 
       memeImage.onerror = () => {
@@ -112,22 +113,20 @@ document.addEventListener('DOMContentLoaded', () => {
     }
   }
 
-  // Initial meme load
   showMeme();
 
-  // Meme button click
   nextMeme.addEventListener('click', () => {
     showMeme();
     playSound('click');
   });
-});
-
 
   const favoriteList = document.getElementById('favorite-list');
   function updateFavoriteList() {
     const favorites = JSON.parse(localStorage.getItem('favoriteJokes')) || [];
-    favoriteList.innerHTML = '<h3>Favorite Jokes</h3>' + favorites.map(joke => `<p>${joke}</p>`).join('');
+    favoriteList.innerHTML = '<h3>Favorite Jokes</h3>' +
+      favorites.map(joke => `<p>${joke}</p>`).join('');
   }
+
   updateFavoriteList();
 
   gsap.from('.navbar', { opacity: 0, y: -50, duration: 1 });
