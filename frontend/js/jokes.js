@@ -82,30 +82,7 @@ document.addEventListener('DOMContentLoaded', () => {
   const memeImage = document.getElementById('meme-image');
   const memeFallback = document.getElementById('meme-fallback');
   const nextMeme = document.getElementById('next-meme');
- async function showMeme() {
-  memeImage.style.display = 'none';
-  memeFallback.style.display = 'none';
-
-  try {
-    const response = await fetch("https://meme-api.com/gimme");
-    const data = await response.json();
-    const memeURL = data.url;
-
-    memeImage.src = memeURL;
-
-    memeImage.onload = () => {
-      memeImage.style.display = 'block';
-      gsap.from(memeImage, { opacity: 0, rotate: 10, duration: 0.5 });
-    };
-
-    memeImage.onerror = () => {
-      memeFallback.style.display = 'block';
-    };
-  } catch (err) {
-    console.error("Failed to load meme:", err);
-    memeFallback.style.display = 'block';
-  }
- }
+  
 
   nextMeme.addEventListener('click', () => {
     showMeme();
