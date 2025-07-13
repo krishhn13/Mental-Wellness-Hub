@@ -15,11 +15,15 @@ document.addEventListener('DOMContentLoaded', () => {
     let currentJoke = null;
     let seenJokes = new Set();
   
-    async function fetchJokes(category = 'all') {
-      const url = category === 'all' ? 'http://localhost:5000/api/jokes' : `http://localhost:5000/api/jokes?category=${category}`;
-      const response = await fetch(url);
-      return await response.json();
-    }
+   async function fetchJokes(category = 'all') {
+  const url = category === 'all' 
+    ? '/api/jokes' 
+    : `/api/jokes?category=${category}`;
+    
+  const response = await fetch(url);
+  return await response.json();
+}
+
   
     async function showJoke() {
       const selectedCategory = jokeCategory.value;
