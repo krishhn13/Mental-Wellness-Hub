@@ -248,17 +248,16 @@ body.dark .features {
     color: #000000;
     transition: color 1s ease;
     border : 2px solid #3c73c7;
+      border-radius: 10px;
+    display: inline-block;
+    background-color: #bbace5;
+    padding: 10px;
     &:hover {
         transition: background-color 0.3s ease;
         color: rgb(255, 250, 250);
         background-color: #04010141;
         border : 2px solid #3c73c7;
     };
-    
-    border-radius: 10px;
-    display: inline-block;
-    background-color: #bbace5;
-    padding: 10px;
 }
 .feature-card {
     background: linear-gradient(to bottom, #e0e0e0, #a0ced9);
