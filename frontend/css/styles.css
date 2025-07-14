@@ -250,7 +250,7 @@ body.dark .features {
     &:hover {
         transition: color 0.3s ease;
         color: rgb(124, 15, 15);
-        background-color: #ffffff;
+        background-color: #c4a1a1;
     };
     border : 1px solid #3c73c7;
     border-radius: 10px;
