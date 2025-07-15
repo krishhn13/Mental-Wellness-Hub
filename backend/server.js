@@ -5,6 +5,7 @@ require('dotenv').config(); // Load environment variables from .env
 const app = express();
 app.use(express.json());
 
+
 // Serve frontend static files
 app.use(express.static(path.join(__dirname, '../frontend')));
 
