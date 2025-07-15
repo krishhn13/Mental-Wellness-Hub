@@ -18,6 +18,7 @@ app.use('/api/games', require('./routes/games'));
 app.use('/api/breathe', require('./routes/breathe'));
 app.use('/api/stress', require('./routes/stress'));
 
+
 // Serve index.html for any unmatched routes
 app.get('*', (req, res) => {
   res.sendFile(path.join(__dirname, '../frontend', 'index.html'));
