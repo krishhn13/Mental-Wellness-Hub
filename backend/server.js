@@ -10,6 +10,7 @@ app.use(express.json());
 // Serve frontend static files
 app.use(express.static(path.join(__dirname, '../frontend')));
 
+
 // Routes
 app.use('/api/journal', require('./routes/journal'));
 app.use('/api/jokes', require('./routes/jokes'));
