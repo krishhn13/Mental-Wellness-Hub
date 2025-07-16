@@ -989,7 +989,7 @@ body.dark .social-links a {
         display: inline-block;
     }
     .insights-log-wrapper > * {
-        width: 100%;
+        display: none;
     }
 }
 
