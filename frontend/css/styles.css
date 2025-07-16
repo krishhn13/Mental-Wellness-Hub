@@ -956,9 +956,6 @@ body.dark .social-links a {
     textarea {
         width: 100%;
     }
-}
-
-@media (max-width: 768px) {
     .features {
         padding: 30px 10px;
         margin: 20px 0;
