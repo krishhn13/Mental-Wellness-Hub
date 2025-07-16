@@ -988,9 +988,8 @@ body.dark .social-links a {
         width: 100%;
         display: inline-block;
     }
-    .insights-log-wrapper {
-        grid-template-columns: 1fr;
-        padding: 20px 10px; /* optional tweak for spacing */
+    .insights-log-wrapper > * {
+        width: 100%;
     }
 }
 
