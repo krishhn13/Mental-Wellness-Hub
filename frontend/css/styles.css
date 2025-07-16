@@ -763,7 +763,7 @@ body.dark .random-meme {
 }
 #favorite-list {
     flex: 1;
-    min-width: 300px;
+    min-width: 20px;
     padding: 20px;
     background: linear-gradient(145deg, #f7f0e6 0%, #e6f0fa 100%);
     border-radius: 15px;
