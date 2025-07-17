@@ -11,6 +11,7 @@ document.addEventListener('DOMContentLoaded', () => {
     // Function to save breathing session
     async function saveBreathingSession(duration, breathCount) {
         try {
+            console.log(`Saving session: ${duration}s, ${breathCount} breaths`);
             const response = await fetch('/api/breathe', {
                 method: 'POST',
                 headers: {
@@ -40,9 +41,10 @@ document.addEventListener('DOMContentLoaded', () => {
                 breathCount = 0;
                 sessionStartTime = Date.now();
                 breathCounter.textContent = `Breaths: ${breathCount}`;
-                const time = parseInt(btn.dataset.time) * 60;
+                const time = parseInt(btn.dataset.time) * 60; // Convert minutes to seconds
                 
-                gsap.to(breathingCircle, {
+                // Start the breathing animation
+                const breathingAnimation = gsap.to(breathingCircle, {
                     scale: 1.5,
                     duration: 4,
                     repeat: -1,
@@ -51,18 +53,22 @@ document.addEventListener('DOMContentLoaded', () => {
                     onRepeat: () => {
                         breathCount++;
                         breathCounter.textContent = `Breaths: ${breathCount}`;
-                    },
-                    onComplete: () => {
-                        setTimeout(() => {
-                            breathingActive = false;
-                            gsap.to(breathingCircle, { scale: 1, duration: 1 });
-                            
-                            // Calculate actual duration and save session
-                            const actualDuration = Math.round((Date.now() - sessionStartTime) / 1000);
-                            saveBreathingSession(actualDuration, breathCount);
-                        }, time * 1000);
                     }
                 });
+                
+                // Set a timer to stop the session after the specified time
+                setTimeout(() => {
+                    breathingActive = false;
+                    
+                    // Stop the animation
+                    breathingAnimation.kill();
+                    gsap.to(breathingCircle, { scale: 1, duration: 1 });
+                    
+                    // Calculate actual duration and save session
+                    const actualDuration = Math.round((Date.now() - sessionStartTime) / 1000);
+                    console.log(`Session completed: ${actualDuration}s, ${breathCount} breaths`);
+                    saveBreathingSession(actualDuration, breathCount);
+                }, time * 1000); // Convert seconds to milliseconds
             }
         });
     });
