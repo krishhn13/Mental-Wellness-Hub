@@ -2,7 +2,7 @@ const express = require('express');
 const router = express.Router();
 const fs = require('fs-extra');
 const path = require('path');
-const breathingFile = path.join(__dirname, );
+const breathingFile = path.join(__dirname,"./data/breathing_sessions.json");
 
 // Save breathing session
 router.post('/', async (req, res) => {
