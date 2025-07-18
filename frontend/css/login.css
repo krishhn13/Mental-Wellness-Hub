@@ -37,4 +37,9 @@ button[type="submit"] {
         border: none;
         border-radius: 5px;
         cursor: pointer;
+        font-size: 16px;
+}
+button[type="submit"]:hover {
+        transition: 0.4s;
+        background-color: #45a049;
 }
